@@ -1,5 +1,5 @@
 // src/components/CartDrawer.jsx
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { fmt } from "../utils/formatters";
 import { Link } from "react-router-dom";
 
@@ -12,8 +12,6 @@ function CartDrawer({
   updateQty,
   removeFromCart,
 }) {
-   const drawerRef = useRef(null);
-  const previousFocusRef = useRef(null);
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "Escape" && isOpen) onClose();
